@@ -1,0 +1,1 @@
+cmd_/home/debian/lab_05/lab05_kmods/sysmon/Module.symvers :=  sed 's/ko$$/o/'  /home/debian/lab_05/lab05_kmods/sysmon/modules.order | scripts/mod/modpost -m     -o /home/debian/lab_05/lab05_kmods/sysmon/Module.symvers -e -i Module.symvers -T - 

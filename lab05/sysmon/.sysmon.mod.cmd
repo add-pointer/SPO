@@ -1,0 +1,1 @@
+cmd_/home/debian/lab_05/lab05_kmods/sysmon/sysmon.mod := printf '%s\n'   sysmon.o | awk '!x[$$0]++ { print("/home/debian/lab_05/lab05_kmods/sysmon/"$$0) }' > /home/debian/lab_05/lab05_kmods/sysmon/sysmon.mod
