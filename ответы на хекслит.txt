@@ -1,0 +1,351 @@
+http://nujensait.ru/10750/
+
+
+
+
+
+
+
+
+
+
+Если сайт умер, ответы ниже
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# !/usr/bin/env bash
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# В директории /opt/follow создано множество поддиректорий. И только в одной из них лежит файл (в остальных директориях либо пусто либо другие каталоги).
+# Вам необходимо найти этот файл и записать его имя в файл solution.
+find /opt/follow -type f
+# /opt/follow/me/some/non/i-got-it
+
+# У программы ls есть флаг, который сортирует вывод по размеру файлов. Найдите название этого флага в документации и выполните команду используя данный флаг,
+# которая делает подробный -l (обратите внимание, что это буква, а не цифра 1) вывод файлов из директории /var, отсортированный по размеру.
+ls -lS /var
+
+# В домашней директории пользователя sansa находится единственный скрытый файл. Найдите его и запишите его имя в файл solution.
+ls /home/sansa -a
+# .  ..  anotherfile  file  films  .Greeting  hello  Musi
+
+# Создайте следующую файловую структуру внутри директории fs:
+#
+# fs
+# ├── example1
+# │   ├── file
+# │   └── subexample
+# │       ├── file
+# │       └── directory
+# |           └── another_file
+# └── example2
+#    └── another_file
+# Подсказка
+# В названии файлов всегда присутствует слово file, всё остальное — это директории.
+
+cd fs
+mkdir example1
+touch example1/file
+mkdir example1/subexample
+touch example1/subexample/file
+mkdir example1/subexample/directory
+touch example1/subexample/directory/another_file
+mkdir example2
+touch example2/another_file
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# https://ru.hexlet.io/courses/cli-basics/lessons/environment-variables/exercise_unit
+# Выполните следующие задачи:
+# В списке переменных окружения локальной среды Хекслета есть переменная, имя которой начинается на букву "M".
+# Глобально измените значение этой переменной на /var/tmp
+# Глобально добавьте новую переменную окружения NEW_VAR и установите для неё значение value.
+# Запишите команду, которая выполнит эти операции, в файл solution в одну строку.
+#
+# Подсказки:
+# export
+# Установить новую переменную окружения можно точно так же, как изменить значение существующей
+#
+# При помощи команды export можно установить несколько переменных окружения. Для этого достаточно указать их через пробел:
+# export name1=value1 name2=value2
+
+env
+  SHELL=/bin/bash
+  SUDO_GID=0
+  HOSTNAME=c2b17e61c4d2
+  LANGUAGE=en_US.UTF-8
+  NODE_OPTIONS=--max-old-space-size=400 --experimental-vm-modules --no-warnings
+  SUDO_COMMAND=/usr/bin/bash
+  SUDO_USER=root
+  PWD=/usr/src/app
+  LOGNAME=tirion
+  NODE_ENV=development
+  HOME=/home/tirion
+  LANG=en_US.UTF-8
+  LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+  LESSCLOSE=/usr/bin/lesspipe %s %s
+  TERM=xterm-color
+  LESSOPEN=| /usr/bin/lesspipe %s
+  USER=tirion
+  SHLVL=1
+  LC_CTYPE=C.UTF-8
+  NODE_PATH=/usr/local/lib/hexlet-javascript/node_modules
+  LC_ALL=en_US.UTF-8
+  PATH=/usr/local/lib/hexlet-javascript/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  SUDO_UID=0
+  MAIL=/var/mail/tirion
+  EXERCISE_PATH=/usr/src/app
+  COMPOSER_HOME=undefined
+  _=/usr/bin/env
+/usr/src/app$ export MAIL=/var/tmp
+/usr/src/app$ export NEW_VAR=value
+/usr/src/app$ echo "export MAIL=/var/tmp export NEW_VAR=value" > solution
+
+# В истории есть команда, в которой встречается слово MAIL.
+# Воспользуйтесь реверсивным поиском, найдите и выполните эту команду.
+# Результат её работы скопируйте в файл solution.
+
+# <ctrl+r> , <type "MAIL">
+  printenv MAIL
+  /var/mail/tirion
+echo "/var/mail/tirion" > solution
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# https://ru.hexlet.io/courses/cli-basics/lessons/users-and-groups/exercise_unit
+# У команды id есть опция, которая позволяет вывести на экран только id пользователя.
+# Найдите эту опцию и выведите на экран id пользователя nobody.
+# Запишите получившуюся команду в файл solution.
+# Подсказки
+# Подробную информацию по утилите можно получить командами man id или id --help.
+
+id -u nobody
+  65534
+echo "id -u nobody" > solution
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# https://ru.hexlet.io/courses/cli-basics/lessons/sudo/exercise_unit
+# В файловом дереве в текущей директории есть директория config, которая принадлежит суперпользователю.
+# В директории config создайте файл myfile с текстом Hello, World!
+# Запишите команду, которая это делает, в файл solution
+#
+# Подсказки
+# - пайплайн: https://ru.hexlet.io/courses/cli-basics/lessons/pipeline/theory_unit
+# - sudo: https://ru.wikipedia.org/wiki/Sudo
+# - tee: https://losst.ru/komanda-tee-linux
+# Для перенаправления вывода команды в файл воспользуйтесь утилитой tee
+# В этом упражнении sudo, при использовании с утилитами tee и touch, не запрашивает пароль.
+
+echo "Hello, World!" | sudo tee config/myfile
+echo 'echo "Hello, World!" | sudo tee config/myfile' > solution
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Lesson 16
+# solution
+# Измените права доступа к файлу myfile.
+# Для владельца файла установите разрешение только на чтение и исполнение файла.
+# Для пользователей, входящих в группу владельца,
+# и для остальных пользователей установите разрешение только на исполнение файла.
+# Запишите команду, которая это делает, в файл solution.
+# Подсказка: https://ru.wikipedia.org/wiki/Chmod
+
+chmod u=rx myfile
+chmod g=x,o=x myfile
+echo "chmod u=rx myfile && chmod g=x,o=x myfile" > solution
+
+# Решение учителя:
+chmod 511 myfile
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Lesson 17: https://ru.hexlet.io/courses/cli-basics/lessons/package-manager/exercise_unit
+# Самостоятельная работа
+# Установите программу tree, используя пакетный менеджер и запустите её.
+# Она выводит список файлов в виде дерева.
+sudo apt install tree
+tree .
+
+# У пакетного менеджера apt есть команда,
+# которая позволяет вывести на экран список установленных пакетов.
+#
+# solution
+# Изучите документацию apt, подберите необходимую команду и опции к ней.
+# Выведите на экран количество установленных пакетов, в названии которых встречается подстрока lib.
+# Запишите команду, которая это делает, в файл solution.
+# Подсказки
+# man apt – вывод справки
+# Пайплайн
+# Как посчитать количество строк в файле
+
+apt list| grep lib | wc -l
+echo "apt list| grep lib | wc -l" > solution
+
+# teacher solution:
+apt list --installed | grep lib | wc -l
+
+# Alternative solution
+apt list --installed | grep -c lib
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Lesson 18: https://ru.hexlet.io/courses/cli-basics/lessons/execution/theory_unit
+# Попробуйте узнать, где в вашей системе лежит установленная на одном из прошлых уроков программа tree.
+
+whereis tree
+
+# В текущей директории находится программа, которая называется program. В упражнении вам нужно будет запустить эту программу на исполнение. Но прежде, чем запускать программу, нужно сделать файл program исполняемым.
+# Сделайте файл program исполняемым
+# Запустите программу на исполнение и результат её выполнения скопируйте в файл solution.
+# Подсказки:
+# Изменение прав доступа : https://ru.wikipedia.org/wiki/Chmod
+
+chmod +x program && ./program
+chmod +x program && ./program > solution
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Test exercises
+
+# Shell: Поиск в логах
+# https://ru.hexlet.io/challenges/cli_basics_search_in_logs_exercise
+# В директории logs находится файл access.log, который содержит логи подключения к серверу.
+# Вам нужно найти в этом файле предполагаемые попытки взлома.
+# 02.01.2021 05:33:50 localhost ssh: denied wrong password from 156.78.198.42
+# 02.01.2021 06:28:29 localhost ssh: successfully authenticated from 108.117.162.5
+# 02.01.2021 07:27:32 localhost ssh: successfully logged out from 254.199.78.117
+# 02.01.2021 11:24:56 localhost ssh: connection dropped by timeout from 227.65.89.157
+# 02.01.2021 11:59:29 localhost ssh: denied wrong password from 252.175.99.156
+# 02.01.2021 12:17:44 localhost ssh: connection dropped by timeout from 50.26.154.246
+# Запишите в файл solution команду, которая находит в файле access.log строки,
+# в которых содержится подстрока "denied wrong password".
+# Cортирует их в обратном порядке и выводит на экран 5 самых свежих записей.
+# Подскзка:
+# утилита sort: https://en.wikipedia.org/wiki/Sort_(Unix)
+
+cat ./logs/access.log | grep  "denied wrong password" | sort -r | head -n 5
+
+# teacher solution:
+grep 'denied wrong password' logs/access.log | sort -r | head -n 5
+
+# Shell: Приглашение
+# https://ru.hexlet.io/challenges/cli_basics_prompt_statement_exercise
+# Prompt Statement
+#
+# Вы уже много раз видели в терминале, как выглядит приглашение командной строки для ввода новых команд.
+# Например, в упражнениях на Хекслете оно выглядит так:
+# /usr/src/app$
+# Переменная PS1 определяет то, как будет выглядеть это приглашение,
+# и в этом испытании вам нужно будет определённым образом его изменить.
+#
+# solution
+# Запишите в файл solution команду, которая глобально меняет значение переменной окружения PS1,
+# чтобы приглашение выглядело следующим образом:
+#
+# > tirion@app$
+# Посмотрим текущую рабочую директорию:
+#
+# > tirion@app$ pwd
+# /usr/src/app
+# Узнаем под каким пользователем мы выполнили вход в систему:
+#
+# > tirion@app$ whoami
+# tirion
+# Подсказки
+# Controlling the Prompt: https://www.gnu.org/software/bash/manual/html_node/Controlling-the-Prompt.html
+# Выводите текст как есть, без цветового оформления
+# Подсказка из тестов:
+#  const expected = `> ${username}@${basename(cwd)}$`;
+
+export PS1="tirion@app$ "
+# OR better:
+export USR=$(whoami) && export PS1="> ${USR}@app$ "
+export USR=$(whoami) && export DIR=$(basename "$PWD") && export PS1="> ${USR}@${DIR}$ "
+
+# Final solution (не работает)
+echo "export USR=$(whoami) && export DIR=$(basename $PWD) && export PS1=\"> ${USR}@${DIR}$ \"" > solution
+
+# Shortly: (Should work , but NOT)
+export PS1="> $(whoami)@$(basename $PWD)$ "
+echo "export PS1=\"> $(whoami)@$(basename $PWD)$ \"" > solution
+
+# WORKS:
+cat >> solution
+export PS1="> $(whoami)@$(basename $PWD)$ "
+
+# Решение user-cb1e4c837e85b61b (не работает)
+export USR=tirion && export DIR=/usr/src/app && export PS1="> tirion@$ "
+echo "export USR=tirion && export DIR=/usr/src/app && export PS1=\"> tirion@$ \"" > solution
+
+# Teacher solution:
+export PS1="> \u@\W$ "
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Shell: Запуск программы
+# https://ru.hexlet.io/challenges/cli_basics_run_program_exercise
+
+# Greeter: https://ru.hexlet.io/challenges/cli_basics_run_program_exercise/instance
+# greeter — простое приложение, которое печатает на экран приветствие.
+#
+# В этом испытании вам нужно будет его отладить и запустить. Задача будет считаться выполненной, когда вывод greeter будет соответствовать примеру, который вы видите ниже:
+#
+# $ greeter
+# Hello, Hexlet! It works!
+# Подсказки
+# Чтобы вывести справку, наберите команду greeter -h
+# Для редактирования файла конфигурации используйте редактор nano
+# Формат JSON: https://ru.wikipedia.org/wiki/JSON
+
+whereis greeter
+  greeter: /usr/bin/greeter
+nano /usr/bin/greeter
+nano ../src/index.js
+
+# greeter bin file:
+# !/usr/bin/env node
+
+import program from 'commander';
+
+import run from '../src/index.js';
+
+program
+  .version('0.1.0')
+  .description('Prints a welcome message')
+  .option('-d, --debug ', 'show debug', '0')
+  .action(() => {
+    try {
+      console.log(run());
+    } catch (e) {
+      if (program.opts().debug === '0') {
+        console.error('Something went wrong');
+        process.exit(1);
+      }
+
+      console.error(e.message);
+      process.exit(1);
+    }
+  })
+  .parse(process.argv);
+
+# test.js
+test('check greeter', () => {
+  const result = execSync('greeter').toString().trim();
+  expect(result).toEqual('Hello, Hexlet! It works!');
+});
+
+# SOLVED:
+
+echo "{\"msg\":\"any_json\"}" > /etc/configs/greeter.conf
+greeter
+
+# @see https://ru.hexlet.io/challenges/cli_basics_run_program_exercise/instance
+# Вся задача сводиться к простому созданию файла greeter.conf с любым содержимом с типом данных json
